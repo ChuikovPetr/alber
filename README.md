@@ -10,7 +10,7 @@
 - [One factor analysis](#one_factor)
 - [Multifactor analysis](#multifactor)
 - [Fine tuning](#fine_tuning)
-- [Possible improvment](#improvements)
+- [Possible improvments](#improvements)
 
 
 
@@ -138,7 +138,7 @@ r2_score_test_29f = train(
 Данные оказались слишком шумные для точной настройки параметров модели - не получилось стат. значимо увеличить метрику, изменяя параметры lightgbm. В итоге оставил feature_fraction_by_node == 0.6 (использовал как дефолтное значение), остальные параметры не менял.
 
 
-# Possible improvment <a name="improvements"></a>
+# Possible improvments <a name="improvements"></a>
 
 Если бы было больше времени, можно было бы попробовать следующее:
 
