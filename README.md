@@ -40,6 +40,7 @@ pip install .
 | Название модели  | Метрика R^2 на out-of-time |
 | ------------- | ------------- |
 | model_mf_8f  | 0.015  |
+| Baseline установленный Alber Blanc в ТЗ | 0.01  |
 | baseline_1f  | 0.007  |
 | model_of_29f  | 0.004  |
 
