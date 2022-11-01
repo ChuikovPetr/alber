@@ -20,3 +20,29 @@ git clone git@github.com:ChuikovPetr/alber.git
 cd alber/
 pip install .
 ```
+
+
+# Использование - Fitting <a name="fitting"></a>
+Результатом работы являются 2 скрипта (как указано в тестовом задании): "1. Result - Fitting.ipynb" и  "2. Result - Forecasting.ipynb"<br />
+Первый скрипт Fitting принимает в качестве параметра имя папки с файлами для обучения модели (data.h5 и result.h5), затем рассчитывает признаки на основе этих данных, после чего проводит обучение моделей и валидацию на out-of-time данных (в файле обучается 3 модели baseline_1f, model_of_29f, model_mf_8f)<br />
+
+Общие параметры<br />
+```python
+base = Path('../../Storage/alber') # Имя папки с файлами для обучения модели
+
+train_val_ratio = 0.1 # Сколько данных для
+test_size = 985_564 # Сколько единиц времени для out-of-time
+```
+
+Чтобы обучить конкретную модель нужно задать 2 параметра: имя модели и ключ в словаре dict_features, чтобы подгрузить соответствующие фичи. Далее пример: <br />
+```python
+features_mode = 29
+name_exp = 'model_of_29f'
+
+r2_score_test_29f = train(
+    train_vitrine[['time', 'target'] + dict_features[features_mode]], # train_vitrine рассчитывается ранее в том же блокноте
+    name_exp,
+    train_val_ratio,
+    test_size
+)
+```
