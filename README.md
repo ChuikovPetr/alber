@@ -1,7 +1,7 @@
 # alber
 
 - [Установка](#installing)
-- [Общая концепция модели](#model)
+- [Общая концепция модели и результаты](#model)
 - [Использование - Fitting](#fitting)
 - [Использование - Forecasting](#forecasting)
 - [Features](#features)
