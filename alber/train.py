@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 # +
 import pandas as pd
-import h5py
-import numpy as np
-from typing import List, Tuple
+from typing import List
 from pathlib import Path
 import lightgbm as lgb
 import pickle
@@ -18,7 +16,7 @@ from alber.feature_generation import (
     retime_trades,
     decrease_mem_consuming
 )
-from alber.wf_splitting_data import create_oot, walk_forward_splitting, sample_dates, split_dates
+from alber.wf_splitting_data import sample_dates, split_dates
 
 # +
 def get_only_time_features_vitrine(base: Path) -> pd.DataFrame:
