@@ -52,7 +52,7 @@ pip install .
 Структура:
 1. Папка alber с необходимыми модулями
 
-   1.1. load_data.py - содержит функции для загрузки данных из h5 формата в Pandas DataFrame.
+   1.1. <strong>load_data.py</strong> - содержит функции для загрузки данных из h5 формата в Pandas DataFrame.
 
    1.2. feature_generation.py - содержит функции для генерации признаков.
 
