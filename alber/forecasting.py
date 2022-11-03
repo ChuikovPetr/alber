@@ -2,14 +2,10 @@
 # +
 import pandas as pd
 import h5py
-import numpy as np
-from typing import List, Tuple
 from pathlib import Path
-import lightgbm as lgb
 import pickle
-from sklearn.metrics import r2_score
 
-from alber.load_data import read_order_book, read_trades, read_target
+from alber.load_data import read_order_book, read_trades
 from alber.feature_generation import (
     book_preprocessor, 
     get_trend_features, 
@@ -17,7 +13,6 @@ from alber.feature_generation import (
     retime_trades,
     decrease_mem_consuming
 )
-from alber.wf_splitting_data import create_oot, walk_forward_splitting, sample_dates
 
 
 # -
