@@ -138,21 +138,21 @@ score_path = Path('../../Storage/alber/forecast.h5') # Задаем путь к 
 
 # Features for the best model (detail) <a name="features_detail"></a>
 
-1. stoch_k_price_21_1 - быстрая линия (без сглаживания, то есть параметры стохастика [21, 1, _]) стохастического осциллятора, рассчитанная на основе цены.
-2. wap_balance = wap1 / wap2, где wapi рассчитывается для i-ого bid/ask соответственно.
-3. volume_imbalance = (ask_size1 + ask_size2) - (bid_size1 + bid_size2)
-4. rel_order_count_1_80 - отношение количества ордеров для трейдов за последнюю единицу времени к своей скользящей средней за 80 единиц времени.
-5. rel_price_5_10 - отношение скользящих средних для цены за периоды 5 и 10 соответственно.
-6. log_return_mean_price = log((bid_price1 + ask_price1) / 2)
-7. bid_spread = bid_price1 / bid_price2 - 1
-8. ask_spread = ask_price1 / ask_price2 - 1
-9. Money = price * size - количество торгуемых денег за текущую единицу времени.
-10. rel_stoch_price_21_1_3 - отношение быстрой линии стохастического осциллятора, рассчитанного для цены, к медленной. Параметры стохастического осциллятора: [21, 1, 3].
-11. rel_volume_ask_bid1 = ask_size1 / bid_size1 - 1
-12. bid_ask_spread2 = ask_price2 / bid_price2 - 1
-13. total_volume = (ask_size1 + ask_size2) + (bid_size1 + bid_size2)
-14. rel_price_1_5 - отношение цены к своей скользящей средней с периодом 5.
-15. rel_price_40_80  - отношение скользящих средних для цены за периоды 40 и 80 соответственно.
+1. <strong>stoch_k_price_21_1</strong> - быстрая линия (без сглаживания, то есть параметры стохастика [21, 1, _]) стохастического осциллятора, рассчитанная на основе цены.
+2. <strong>wap_balance</strong> = wap1 / wap2, где wapi рассчитывается для i-ого bid/ask соответственно.
+3. <strong>volume_imbalance</strong> = (ask_size1 + ask_size2) - (bid_size1 + bid_size2)
+4. <strong>rel_order_count_1_80</strong> - отношение количества ордеров для трейдов за последнюю единицу времени к своей скользящей средней за 80 единиц времени.
+5. <strong>rel_price_5_10</strong> - отношение скользящих средних для цены за периоды 5 и 10 соответственно.
+6. <strong>log_return_mean_price</strong> = log((bid_price1 + ask_price1) / 2)
+7. <strong>bid_spread</strong> = bid_price1 / bid_price2 - 1
+8. <strong>ask_spread</strong> = ask_price1 / ask_price2 - 1
+9. <strong>Money</strong> = price * size - количество торгуемых денег за текущую единицу времени.
+10. <strong>rel_stoch_price_21_1_3</strong> - отношение быстрой линии стохастического осциллятора, рассчитанного для цены, к медленной. Параметры стохастического осциллятора: [21, 1, 3].
+11. <strong>rel_volume_ask_bid1</strong> = ask_size1 / bid_size1 - 1
+12. <strong>bid_ask_spread2</strong> = ask_price2 / bid_price2 - 1
+13. <strong>total_volume</strong> = (ask_size1 + ask_size2) + (bid_size1 + bid_size2)
+14. <strong>rel_price_1_5</strong> - отношение цены к своей скользящей средней с периодом 5.
+15. <strong>rel_price_40_80</strong>  - отношение скользящих средних для цены за периоды 40 и 80 соответственно.
 
 # Train/Test splitting  <a name="splitting_train_test"></a>
 
