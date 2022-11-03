@@ -98,7 +98,7 @@ features_mode = 29
 name_exp = 'model_of_29f'
 
 r2_score_test_29f = train(
-    train_vitrine[['time', 'target'] + dict_features[features_mode]], # train_vitrine рассчитывается ранее в том же блокноте
+    train_vitrine[['time', 'target'] + dict_features[features_mode]],
     name_exp,
     train_val_ratio,
     test_size
