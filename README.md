@@ -112,8 +112,11 @@ r2_score_test_29f = train(
 Время расчета необходимых фичей составляет около 6 часов на MacBook Pro (для предоставленного набора данных из приблизительно 10_000_000 наблюдений).
 
 ```python
-data_path = Path('../../Storage/alber/data.h5') # Задаем путь к файлу, содержащему необходимые данные
-score_path = Path('../../Storage/alber/forecast.h5') # Задаем путь к файлу, куда положем результат
+# Задаем путь к файлу, содержащему необходимые данные
+data_path = Path('../../Storage/alber/data.h5')
+
+# Задаем путь к файлу, куда положем результат
+score_path = Path('../../Storage/alber/forecast.h5')
 ```
 
 # Features <a name="features"></a>
