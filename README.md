@@ -54,11 +54,11 @@ pip install .
 
    1.1. <strong>load_data.py</strong> - содержит функции для загрузки данных из h5 формата в Pandas DataFrame.
 
-   1.2. feature_generation.py - содержит функции для генерации признаков.
+   1.2. <strong>feature_generation.py</strong> - содержит функции для генерации признаков.
 
-   1.3. wf_splitting_data.py - содержит функции для разбиения данных (Walk-Forward и взятие обычного сэмпла).
+   1.3. <strong>wf_splitting_data.py</strong> - содержит функции для разбиения данных (Walk-Forward и взятие обычного сэмпла).
 
-   1.4. train.py - содержит функции для разбиения данных (Walk-Forward и взятие обычного сэмпла).
+   1.4. <strong>train.py</strong> - содержит функции для разбиения данных (Walk-Forward и взятие обычного сэмпла).
 
 
 # Использование - Fitting <a name="fitting"></a>
