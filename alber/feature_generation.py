@@ -1,5 +1,6 @@
 from typing import List
 
+import h5py
 import numpy as np
 import pandas as pd
 
@@ -23,7 +24,7 @@ def calc_wap2(df: pd.DataFrame) -> pd.Series:
 
 # Function to calculate the log of the return
 # Remember that logb(x / y) = logb(x) - logb(y)
-def log_return(df: pd.DataFrame) -> pd.Series:
+def log_return(series: pd.Series) -> np.ndarray:
     return np.log(series).diff()
 
 

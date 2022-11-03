@@ -1,8 +1,9 @@
 import argparse
 import logging
 from pathlib import Path
-from typing import List
+from typing import Dict, List
 
+import pandas as pd
 
 
 def get_setting(adding_arguments: List[List[str]] = []):

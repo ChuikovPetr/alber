@@ -1,9 +1,13 @@
+from typing import Tuple
+
 import h5py
 import numpy as np
 import pandas as pd
 
 
-def get_two_columns_of_ob(name: str, folder_name: str):
+def get_two_columns_of_ob(
+    name: str, folder_name: str
+) -> Tuple[pd.DataFrame, pd.DataFrame]:
     df = pd.DataFrame(np.array(h5py.File(folder_name)["OB"][name]))
     df.columns = [i for i in range(df.shape[1])]
     df = df[[0, 1]]
@@ -13,7 +17,7 @@ def get_two_columns_of_ob(name: str, folder_name: str):
     return df1, df2
 
 
-def read_order_book(folder_name: str):
+def read_order_book(folder_name: str) -> pd.DataFrame:
     time = pd.DataFrame(np.array(h5py.File(folder_name)["OB"]["TS"]))
 
     bid_price1, bid_price2 = get_two_columns_of_ob("Bid", folder_name)
@@ -51,7 +55,7 @@ def read_order_book(folder_name: str):
     return res
 
 
-def read_trades(folder_name: str):
+def read_trades(folder_name: str) -> pd.DataFrame:
     time = pd.DataFrame(np.array(h5py.File(folder_name)["Trades"]["TS"]))
     price = pd.DataFrame(np.array(h5py.File(folder_name)["Trades"]["Price"]))
     size = pd.DataFrame(np.array(h5py.File(folder_name)["Trades"]["Amount"]))
@@ -85,7 +89,7 @@ def read_trades(folder_name: str):
     return trades
 
 
-def read_target(folder_name: str):
+def read_target(folder_name: str) -> pd.DataFrame:
     time = pd.DataFrame(np.array(h5py.File(folder_name)["Return"]["TS"]))
     target = pd.DataFrame(np.array(h5py.File(folder_name)["Return"]["Res"]))
 
